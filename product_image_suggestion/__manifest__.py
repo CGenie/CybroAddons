@@ -30,7 +30,18 @@
     'company': 'Cybrosys Techno Solutions',
     'maintainer': 'Cybrosys Techno Solutions',
     'depends': ['base', 'product'],
-    'external_dependencies': {'python': ['base64', 'PIL','resizeimage']},
+    'external_dependencies': {
+        'python': [
+            'base64',
+            'PIL',
+            'resizeimage'
+        ],
+        '_packages': {
+            'python': {
+                'resizeimage': 'python-resize-image',
+            },
+        },
+    },
     'website': 'https://www.cybrosys.com',
     'data': [
         'views/product_template.xml',
