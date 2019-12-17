@@ -6,10 +6,7 @@
 #    Author: Saritha Sahadevan(<https://www.cybrosys.com>)
 #    you can modify it under the terms of the GNU LESSER
 #    GENERAL PUBLIC LICENSE (LGPL v3), Version 3.
-#
-#    It is forbidden to publish, distribute, sublicense, or sell copies
-#    of the Software or modified copies of the Software.
-#
+
 #    This program is distributed in the hope that it will be useful,
 #    but WITHOUT ANY WARRANTY; without even the implied warranty of
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -22,7 +19,7 @@
 ##############################################################################
 {
     'name': "User Log Details",
-    'version': '12.0.2.0.0',
+    'version': '12.0.1.0.1',
     'summary': """Login User Details & IP Address""",
     'description': """This module records login information of user""",
     'author': "Cybrosys Techno Solutions ",
@@ -31,7 +28,7 @@
     'website': "https://www.cybrosys.com",
     'category': 'Tools',
     'depends': ['base'],
-    'license': 'AGPL-3',
+    'license': 'LGPL-3',
     'data': [
         'security/ir.model.access.csv',
         'views/login_user_views.xml'],

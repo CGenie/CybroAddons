@@ -6,10 +6,7 @@
 #    Author: Saritha Sahadevan(<https://www.cybrosys.com>)
 #    you can modify it under the terms of the GNU LESSER
 #    GENERAL PUBLIC LICENSE (LGPL v3), Version 3.
-#
-#    It is forbidden to publish, distribute, sublicense, or sell copies
-#    of the Software or modified copies of the Software.
-#
+
 #    This program is distributed in the hope that it will be useful,
 #    but WITHOUT ANY WARRANTY; without even the implied warranty of
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -34,8 +31,8 @@ class LoginUserDetail(models.Model):
     _inherit = 'res.users'
 
     @api.model
-    def check_credentials(self, password):
-        result = super(LoginUserDetail, self).check_credentials(password)
+    def _check_credentials(self, password):
+        result = super(LoginUserDetail, self)._check_credentials(password)
         ip_address = request.httprequest.environ['REMOTE_ADDR']
         vals = {'name': self.name,
                 'ip_address': ip_address
